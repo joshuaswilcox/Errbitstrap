@@ -1,6 +1,6 @@
 - content_for :title, t('.title')
 - content_for :action_bar do
-  %span= link_to(t('.new_app'), new_app_path, :class => 'add') if current_user.admin?
+  %span= link_to(t('.new_app'), new_app_path, :class => 'btn btn-large btn-primary') if current_user.admin?
 
 %table.apps
   %thead

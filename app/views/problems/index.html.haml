@@ -4,9 +4,9 @@
 
 - content_for :action_bar do
   - if @all_errs
-    = link_to 'hide resolved', problems_path, :class => 'button'
+    = link_to 'hide resolved', problems_path, :class => 'button btn btn-large btn-primary'
   - else
-    = link_to 'show resolved', problems_path(:all_errs => true), :class => 'button'
+    = link_to 'show resolved', problems_path(:all_errs => true), :class => 'button btn btn-large btn-primary'
 
 %section
   = form_tag search_problems_path(:all_errs => @all_errs), :method => :get, :remote => true do

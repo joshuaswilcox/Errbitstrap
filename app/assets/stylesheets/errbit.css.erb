@@ -7,6 +7,7 @@ html {
 body {
   margin: 0; padding: 0;
   font-size: 1.3em; line-height: 1.4em;
+  margin-top: 50px;
 }
 
 /* Convenience Classes */
@@ -34,12 +35,6 @@ a         { color: #0069cc; text-decoration: none;}
 a:visited { color: #0069cc;}
 a:hover   { color: #0069cc; text-decoration: underline; }
 a.action  { float: right; font-size: 0.9em;}
-
-#header > div, #content-wrapper, #footer {
-  width: 930px;
-  margin: 0 auto;
-  position: relative;
-}
 
 /* Header */
 #header {
@@ -196,39 +191,18 @@ a.action  { float: right; font-size: 0.9em;}
 #content-title .meta { font-size: 0.9em; color: #787878; }
 
 /* Action Bar */
+#action-title {
+  position: relative;
+}
 #action-bar {
   position: absolute;
   text-align: right;
-  top: 22px; right: 24px;
+  top: -10px;
+  right: 0px;
 }
 #action-bar span {
   display: inline-block;
-  margin-left: 18px;
-  margin-bottom: 16px;
   text-decoration: none;
-  color: #666;
-  background: #FFF url(<%= asset_path "images/button-bg.png" %>) 0 bottom repeat-x;
-  border-radius: 50px;
-  -moz-border-radius: 50px;
-  -webkit-border-radius: 50px;
-  border: 1px solid #bbb;
-}
-#action-bar span a {
-  color: #666;
-  display: block;
-  padding: 0 20px 0 40px;
-  font-size: 14px; font-weight: bold; line-height: 39px; text-decoration: none;
-  text-shadow: 1px 1px 0px #FFF; -webkit-text-shadow: 1px 1px 0px #FFF;
-  background: transparent 10px 8px no-repeat;
-}
-#action-bar a:hover { text-decoration: none;}
-#action-bar span:hover {
-  box-shadow: 0 0 3px #69c;
-  -moz-box-shadow: 0 0 3px #69c;
-  -webkit-box-shadow: 0 0 3px #69c;
-}
-#action-bar a.add {
-  background-image: url(<%= asset_path "images/icons/add.png" %>);
 }
 
 #action-bar .calendar_link {

@@ -26,6 +26,9 @@ gem 'rails_autolink'
 # It's for internal use only, and we monkeypatch certain methods
 gem 'hoptoad_notifier', "~> 2.4"
 
+gem "bootstrap-sass"
+gem "font-awesome-rails"
+
 
 # Remove / comment out any of the gems below if you want to disable
 # a given issue tracker, notification service, or authentication.
@@ -128,4 +131,7 @@ group :assets do
   gem 'pjax_rails'
   gem 'underscore-rails'
   gem 'turbo-sprockets-rails3'
+  gem 'sass-rails',   '~> 3.2.3'
+  gem 'coffee-rails', '~> 3.2.1'
+  gem 'font-awesome-sass'
 end

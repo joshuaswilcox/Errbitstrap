@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= "#{t('.title')} &mdash; #{yield(:page_title).present? ? yield(:page_title) : yield(:title)}".html_safe %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <%= favicon_link_tag %>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "modernizr/modernizr" %>
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+     <%= javascript_include_tag "html5shiv/dist/html5shiv" %>
+     <%= javascript_include_tag "respond/src/respond" %>
+  <![endif]-->
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="container">
+    <%= render 'shared/navigation' %>
+    <%= render 'shared/flash_messages' %>
+    <div id="action-title">
+      <h1><%= yield :title %></h1>
+      <span class="meta"><%= yield :meta %></span>
+      <% if (action_bar = yield(:action_bar)).present? %>
+        <div id="action-bar">
+          <%= action_bar %>
+        </div>
+      <% end %>
+    </div>
+    <%= yield %>
+    <% if content_for?(:comments) %>
+      <%= yield(:comments) %>
+    <% end %>
+
+    <div id="footer">
+      <%= t('.powered_html', :link => link_to(t('.errbit'), 'http://github.com/errbit/errbit', :target => '_blank')) %>
+      <br />
+      <%= Errbit::Version.to_s %>
+    </div>
+  </div>
+  <%= javascript_include_tag "application" %>
+</body>
+</html>

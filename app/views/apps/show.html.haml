@@ -13,14 +13,14 @@
   = app.api_key
 - content_for :action_bar do
   - if current_user.admin?
-    = link_to t('.edit'), edit_app_path(app), :class => 'button'
+    = link_to t('.edit'), edit_app_path(app), :class => 'button btn btn-large btn-primary'
   - if all_errs
-    = link_to t('.unresolved_errs'), app_path(app), :class => 'button'
+    = link_to t('.unresolved_errs'), app_path(app), :class => 'button btn btn-large btn-primary'
   - else
-    = link_to t('.all_errs'), app_path(app, :all_errs => true), :class => 'button'
+    = link_to t('.all_errs'), app_path(app, :all_errs => true), :class => 'button btn btn-large btn-primary'
 
   - if current_user.watching?(app)
-    = link_to t('.unwatch'),  app_watcher_path({:app_id => app, :id => current_user.id}), :method => :delete, :class => 'button', :confirm => t('.are_you_sure')
+    = link_to t('.unwatch'),  app_watcher_path({:app_id => app, :id => current_user.id}), :method => :delete, :class => 'button btn btn-large btn-primary', :confirm => t('.are_you_sure')
 %h3#watchers_toggle
   =t('.watchers')
   %span.click_span=t('.show_hide')

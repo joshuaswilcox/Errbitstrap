@@ -1,0 +1,8 @@
+<% unless flash.keys.empty? %>
+  <% flash.each do |type, message| %>
+    <div class="<%= type %> <%= type %>-info alert-dismissable">
+      <button type="button" class="close" data-dismiss="<%= type %>" aria-hidden="true">&times;</button>
+      <p><%= message %></p>
+    </div>
+  <% end %>
+<% end %>
