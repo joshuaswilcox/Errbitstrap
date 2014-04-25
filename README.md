@@ -610,3 +610,6 @@ Copyright
 
 Copyright (c) 2010-2013 Errbit Team. See LICENSE for details.
 
+=======
+Errbitstrap
+===========
